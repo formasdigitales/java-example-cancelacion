@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://wservicios/" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://wservicios/">
+
+<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?xsd=1"/>
+
+<xs:element name="Cancelacion40_1" type="tns:Cancelacion40_1"/>
+
+<xs:element name="Cancelacion40_1Response" nillable="true" type="tns:Cancelacion40_3Response"/>
+
+<xs:element name="Cancelacion40_2" type="tns:Cancelacion40_2"/>
+
+<xs:element name="Cancelacion40_2Response" nillable="true" type="tns:Cancelacion40_3Response"/>
+
+<xs:element name="Cancelacion40_3" type="tns:Cancelacion40_3"/>
+
+<xs:element name="Cancelacion40_3Response" type="tns:Cancelacion40_3Response"/>
+
+<xs:complexType name="Cancelacion40_1">
+<xs:sequence>
+<xs:element name="rfcEmisor" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="tns:wsFolios40" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="publicKey" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+<xs:element name="privateKey" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsFolios40">
+<xs:sequence>
+<xs:element name="folio" type="tns:wsFolio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsFolio">
+<xs:sequence>
+<xs:element name="folioSustitucion" type="xs:string" minOccurs="0"/>
+<xs:element name="motivo" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accesos">
+<xs:sequence>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion40_3Response">
+<xs:sequence>
+<xs:element name="return" type="tns:wsCancelacionResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsCancelacionResponse">
+<xs:sequence>
+<xs:element name="acuse" type="xs:string" minOccurs="0"/>
+<xs:element name="codEstatus" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="tns:wsFoliosResponse" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsFoliosResponse">
+<xs:sequence>
+<xs:element name="folio" type="tns:folio" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="folio">
+<xs:sequence>
+<xs:element name="estatusUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion40_2">
+<xs:sequence>
+<xs:element name="rfcEmisor" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="tns:wsFolios40" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="signatureType" type="ns1:SignatureType" minOccurs="0"/>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion40_3">
+<xs:sequence>
+<xs:element name="nocertificado" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="tns:wsFolios40" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

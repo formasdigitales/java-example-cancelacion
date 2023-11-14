@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://www.sat.gob.mx/sitio_internet/cfd">
+
+<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?xsd=1"/>
+
+<xs:element name="Cancelacion">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Folios" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Folio">
+<xs:complexType>
+<xs:sequence/>
+<xs:attribute name="UUID" type="xs:string" use="required"/>
+<xs:attribute name="Motivo" type="xs:string" use="required"/>
+<xs:attribute name="FolioSustitucion" type="xs:string"/>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Signature" type="ns1:SignatureType" form="qualified"/>
+</xs:sequence>
+<xs:attribute name="RfcEmisor" type="xs:string" use="required"/>
+<xs:attribute name="Fecha" type="xs:anySimpleType" use="required"/>
+</xs:complexType>
+</xs:element>
+</xs:schema>

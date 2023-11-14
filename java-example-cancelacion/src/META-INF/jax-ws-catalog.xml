@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?wsdl" uri="wsdl/dev33.facturacfdi.mx_80/WSCancelacion40Service.wsdl"/>
+    <system systemId="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?xsd=1" uri="wsdl/dev33.facturacfdi.mx_80/WSCancelacion40Service.xsd_1.xsd"/>
+    <system systemId="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?xsd=2" uri="wsdl/dev33.facturacfdi.mx_80/WSCancelacion40Service.xsd_2.xsd"/>
+    <system systemId="http://dev33.facturacfdi.mx:80/WSCancelacion40Service?xsd=3" uri="wsdl/dev33.facturacfdi.mx_80/WSCancelacion40Service.xsd_3.xsd"/>
+</catalog>
